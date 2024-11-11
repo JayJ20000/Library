@@ -11,7 +11,7 @@ default: library
 # All the object files needed to create the executable file. For this assignment:
 # Book.o, Library.o, main.o
 
-library:    Book.o Library.o main.o 
+library: Book.o Library.o main.o 
 	$(CC) $(CFLAGS) -o library Book.o Library.o main.o
 
 # The rule to create Book.o

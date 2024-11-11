@@ -2,20 +2,25 @@
 #define BOOK_H
 
 #include <string>
-using namespace std;
 
 class Book {
-public:
-    string title;
-    string author_name;
-    int pages;
-    string isbn;
-    float cover_price;
-    int year;
 
-    Book(string title, string author_name, int pages, string isbn, float cover_price, int year);
+public:
+    std::string title;       
+    std::string author_name; 
+    int pages;          
+    std::string isbn;        
+    float cover_price;  
+    int year;           
+
+    // Constructor to initialize a book objejct
+    Book(std::string title, std::string author_name, int pages, std::string isbn, float cover_price, int year);
+
+    // Operator to allow comparison 
+    bool operator<(const Book& other); 
+
+    // Function to display the details of the book
     void display_book(); 
-    // bool operator<(const Book& other); 
 };
 
-#endif
+#endif 
